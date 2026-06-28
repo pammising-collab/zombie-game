@@ -1,0 +1,120 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #1a2a1a 0%, #070b08 70%, #020403 100%);
+  color: #f4f4f4;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  cursor: crosshair;
+}
+
+.hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.panel {
+  background: rgba(7, 12, 10, 0.78);
+  border: 1px solid rgba(120, 255, 130, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 12px 14px;
+  min-width: 180px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.panel h1,
+.panel h2,
+.panel p {
+  margin: 0;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.health-bar {
+  width: 120px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.health-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #ff4d4d, #ff9f43);
+  transition: width 0.2s ease;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 5;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.card {
+  background: rgba(10, 16, 12, 0.95);
+  border: 1px solid rgba(130, 255, 130, 0.2);
+  border-radius: 20px;
+  padding: 28px 32px;
+  text-align: center;
+  min-width: 320px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+button {
+  margin-top: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2ecc71, #16a085);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(22, 160, 133, 0.35);
+}
+
+.small {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-top: 8px;
+}

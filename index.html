@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zombie Survival</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hud">
+      <div class="panel">
+        <h1>Zombie Survival</h1>
+        <div class="stat-row">
+          <strong>Score:</strong>
+          <span id="scoreValue">0</span>
+        </div>
+        <div class="stat-row">
+          <strong>Level:</strong>
+          <span id="levelValue">1</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Player</h2>
+        <div class="stat-row">
+          <strong>Health:</strong>
+          <span id="healthValue">100 / 100</span>
+        </div>
+        <div class="stat-row">
+          <div class="health-bar">
+            <div class="health-fill" id="healthFill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="game"></canvas>
+
+    <div class="overlay" id="overlay">
+      <div class="card">
+        <h2>Game Over</h2>
+        <p id="message">You were overwhelmed by the horde.</p>
+        <button id="restartBtn">Restart Game</button>
+        <p class="small">Use W, A, S, D to move and mouse to aim.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
